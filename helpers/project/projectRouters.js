@@ -1,6 +1,6 @@
 const express = require('express');
-const Projects = require('./project_models.js');
-const Tasks = require('./task_models.js');
+const Projects = require('./projectModel');
+const Tasks = require('../task/taskModel');
 const router = express.Router();
 router.get('/', (req, res) => {
     Projects.find().then(projects => {

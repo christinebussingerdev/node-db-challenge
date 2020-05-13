@@ -1,5 +1,5 @@
 const express = require('express');
-const Resources = require('./resource_models.js');
+const Resources = require('./resourceModel');
 const router = express.Router();
 router.get('/', (req, res) => {
     Resources.find().then(resources => {
