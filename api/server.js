@@ -1,7 +1,7 @@
 const express = require('express')
 
 //import routers
-// const projectRouter = require('./api/routers/projectRouter')
+const projectRouter = require('./api/helpers/project/projectRouter')
 
 //server init
 const server = express();
@@ -9,7 +9,7 @@ const server = express();
 server.use(express.json())
 
 // use routers
-// server.use('/projects', projectRouter)
+server.use('/projects', projectRouter)
 
 // root msg
 server.get('/', (req, res) => {
